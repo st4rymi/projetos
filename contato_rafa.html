@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato_Rafa</title>
+    <link rel="shortcut icon" href="./assents/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assents/css/styles_mobile_menu.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    
+<style>
+    #clean_code {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        display: block;
+        margin: 0% auto;
+    }
+</style>
+</head>
+
+
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>The Mobile Firt - Menu</h1>
+    </header>
+    
+    <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">
+        menu
+    </span>
+    
+
+    <menu id="itens">
+        <ul>
+            <li><a href="clean_code.html">Clean_Code</a></li>
+            <li><a href="mobile_first.html"> Mobile_First</a></li>
+            <li><a href="contato_rafa.html">Contato_Rafa</a></li>
+            <li><a href="ux_ui.html">Ux_Ui</a></li>
+             <li><a href="Portifolio_rafa.html">Portifolio_Rafa</a></li>
+        </ul>
+    </menu>
+
+    <main>
+        <img src="img/img_contato_rafa.png.png" alt="teste com contato_rafa" id="Contato_Rafa">
+
+
+
+        <article>
+            <h2>Testando Media Queries Contato</h2>
+            <p>
+                A seção de Contatos é uma parte essencial de qualquer site, pois permite que os 
+            visitantes se comuniquem diretamente com a empresa, profissional ou organização responsável pela página. 
+            É através dela que o usuário pode tirar dúvidas, fazer sugestões, solicitar orçamentos
+            ou enviar mensagens importantes.
+                Um bom design de página de contatos deve ser simples, objetivo e funcional. 
+            Normalmente, inclui um formulário de envio de mensagens, além de informações como e-mail,
+            telefone, endereço e links para redes sociais.
+                Ter uma área de contatos bem estruturada transmite credibilidade e profissionalismo,
+             além de facilitar a interação com o público e fortalecer o relacionamento com os visitantes do 
+             site.
+            </p>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>
+            @st4rymi - Contato - 2025
+        </p>
+    </footer>
+    
+    <script>
+       
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+        
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+
+</body>
+
+</html>
