@@ -1,0 +1,22 @@
+@charset "utf-8"
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background:-moz-repeating-radial-gradient(to right, #7e0000 , rgb(145, 28, 28));
+    color: #846aac;
+    line-height: 1,6;
+    padding: 20px;
+ }
+ header {
+    background-color: rgb(153, 38, 211);
+    color: rgb(245, 200, 200);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(169, 160, 160);
+ }
+  a {
+    color: rgb(230, 200, 255);
+    text-decoration: solid;
+    transition: color 0.3s ease;
+  }

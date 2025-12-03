@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato — Exemplo</title>
+  <style>
+    :root {
+      --border: #d0d7d7;
+      --muted: #000768;
+      --accent: #a498ff;
+      --accent-2: #7fb2c2;
+      --danger: #b00020;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(135deg, #356ec4, #e2c2ff); /* duas cores */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #020202;
+    }
+
+    .wrap {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+      background: rgba(255, 255, 255, 0.25); /* camada translúcida */
+      backdrop-filter: blur(12px); /* cria o efeito de vidro */
+    }
+
+    .card {
+      width: 100%;
+      max-width: 720px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 10px 25px rgba(54, 25, 135, 0.1);
+      padding: 28px;
+      box-sizing: border-box;
+      backdrop-filter: blur(15px);
+    }
+
+    h1 {
+      margin: 0 0 18px 0;
+      font-size: 22px;
+      color: #134678;
+      font-weight: 600;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    label {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+      resize: vertical;
+      min-height: 42px;
+      transition: box-shadow .12s, border-color .12s;
+      background: #fff;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(43, 134, 245, 0.08);
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .col-1 { flex: 1 1 100%; }
+    .col-2 { flex: 1 1 48%; }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+      margin-top: 6px;
+    }
+
+    button {
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .btn-clear {
+      background: var(--accent-2);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .btn-clear:hover {
+      opacity: 0.85;
+    }
+
+    .btn-submit {
+      background: var(--accent);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .btn-submit:hover {
+      opacity: 0.85;
+    }
+
+    .invalid {
+      border-color: var(--danger) !important;
+      box-shadow: 0 0 0 3px rgba(255, 0, 47, 0.06);
+    }
+
+    @media (max-width: 560px) {
+      .col-2 { flex-basis: 100%; }
+      .actions { flex-direction: column; }
+      .actions button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-labelledby="form-title">
+      <h1 id="form-title">Envie a sua Mensagem</h1>
+
+      <form id="contactForm" novalidate>
+        <div class="field col-1">
+          <label for="nome">Nome Completo</label>
+          <input id="nome" name="nome" type="text" placeholder="Insira o seu nome" autocomplete="name" required />
+        </div>
+
+        <div class="field col-1">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Insira o seu email" autocomplete="email" required />
+        </div>
+
+        <div class="row">
+          <div class="field col-2">
+            <label for="telefone">Telefone</label>
+            <input id="telefone" name="telefone" type="text" placeholder="(XX) XXXX-XXXX" inputmode="tel" maxlength="14" />
+          </div>
+
+          <div class="field col-2">
+            <label for="telemovel">Telemóvel</label>
+            <input id="telemovel" name="telemovel" type="text" placeholder="(XX) 9XXXX-XXXX" inputmode="tel" maxlength="15" />
+          </div>
+        </div>
+
+        <div class="field col-1">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua mensagem..." required></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn-clear" id="btnClear">Limpar</button>
+          <button type="submit" class="btn-submit" id="btnSend">Enviar Mensagem</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const btnClear = document.getElementById('btnClear');
+
+    function mascaraTelefone(valor) {
+      valor = valor.replace(/\D/g, '');
+      if (valor.length <= 10) {
+        valor = valor.replace(/^(\d{2})(\d)/, '($1) $2');
+        valor = valor.replace(/(\d{4})(\d)/, '$1-$2');
+      } else {
+        valor = valor.replace(/^(\d{2})(\d)/, '($1) $2');
+        valor = valor.replace(/(\d{5})(\d)/, '$1-$2');
+      }
+      return valor;
+    }
+
+    document.getElementById('telefone').addEventListener('input', (e) => {
+      e.target.value = mascaraTelefone(e.target.value);
+    });
+
+    document.getElementById('telemovel').addEventListener('input', (e) => {
+      e.target.value = mascaraTelefone(e.target.value);
+    });
+
+    btnClear.addEventListener('click', () => {
+      form.reset();
+      form.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+    });
+
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      form.querySelectorAll('.invalid').forEach(el => el.classList.remove('invalid'));
+
+      const nome = form.nome;
+      const email = form.email;
+      const mensagem = form.mensagem;
+      let ok = true;
+
+      if (!nome.value.trim()) { nome.classList.add('invalid'); ok = false; }
+      if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        email.classList.add('invalid'); ok = false;
+      }
+      if (!mensagem.value.trim()) { mensagem.classList.add('invalid'); ok = false; }
+
+      if (!ok) {
+        alert('Verifique os campos em destaque.');
+        return;
+      }
+
+      const data = {
+        nome: nome.value.trim(),
+        email: email.value.trim(),
+        telefone: form.telefone.value.trim(),
+        telemovel: form.telemovel.value.trim(),
+        mensagem: mensagem.value.trim()
+      };
+
+      alert('Mensagem pronta para envio:\n' + JSON.stringify(data, null, 2));
+    });
+  </script>
+</body>
+</html>

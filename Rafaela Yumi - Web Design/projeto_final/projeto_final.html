@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SportLine - Mockup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="paper">
+    <div class="topbar">
+      <div class="title">
+        <div class="logo-bubble">SPORTLINE</div>
+        <div class="subtitle">Veículos (veja por marca e modelo)</div>
+      </div>
+      <div class="small-note">Cadastros / Criar conta</div>
+    </div>
+
+    <div class="layout">
+      <!-- Main content: brand icons -->
+      <main>
+        <div class="brands">
+          <div class="brand-card"><div class="brand-icon">JP</div>Jeep</div>
+          <div class="brand-card"><div class="brand-icon">CH</div>Chevrolet</div>
+          <div class="brand-card"><div class="brand-icon">PG</div>Peugeot</div>
+          <div class="brand-card"><div class="brand-icon">BM</div>BMW</div>
+          <div class="brand-card"><div class="brand-icon">FD</div>Ford</div>
+          <div class="brand-card"><div class="brand-icon">HD</div>Honda</div>
+        </div>
+
+      </main>
+
+      <!-- Sidebar: filters -->
+      <aside class="filters">
+        <div>
+          <div class="filter-title">Filtros</div>
+          <div class="small-note">Escolha Marca, Modelo, Ano e Faixa de Preço</div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-row">
+            <label style="min-width:70px">Marca:</label>
+            <select>
+              <option>Todas</option>
+              <option>Jeep</option>
+              <option>Chevrolet</option>
+              <option>Peugeot</option>
+              <option>BMW</option>
+              <option>Ford</option>
+              <option>Honda</option>
+            </select>
+          </div>
+
+          <div class="filter-row">
+            <label style="min-width:70px">Modelo:</label>
+            <select>
+              <option>Qualquer</option>
+            </select>
+          </div>
+
+          <div class="filter-row">
+            <label style="min-width:70px">Ano:</label>
+            <select>
+              <option>Indiferente</option>
+              <option>2025</option>
+              <option>2024</option>
+              <option>2020-2023</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="display:block;margin-bottom:6px">Preço (máx)</label>
+            <input type="range" min="0" max="300000" step="1000" />
+          </div>
+
+          <div class="small-note">Tipo:</div>
+          <div class="toggle-group">
+            <div class="pill">Carro</div>
+            <div class="pill">Caminhão</div>
+            <div class="pill">Encomenda</div>
+          </div>
+
+          <div class="actions">
+            <button class="btn">Aplicar</button>
+            <button class="btn">Limpar</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

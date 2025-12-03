@@ -1,0 +1,60 @@
+#clean_code {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+#contato_rafa {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+#mobile_first {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+#ux_ui {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+#portfolio {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+}
+
+ body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background:-moz-repeating-radial-gradient(to right, #7e0000 , rgb(145, 28, 28));
+    color: #7e0000;
+    line-height: 1,6;
+    padding: 20px;
+ }
+ header {
+    background-color: rgb(126, 28, 28);
+    color: rgb(245, 200, 200);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(169, 160, 160);
+ }
+  a {
+    color: rgb(255, 193, 193);
+    text-decoration: solid;
+    transition: color 0.3s ease;
+  }
