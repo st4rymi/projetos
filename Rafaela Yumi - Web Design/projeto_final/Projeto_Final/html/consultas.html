@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas</title>
+
+    <!-- LINK DO CSS (pasta html → pasta css) -->
+    <link rel="stylesheet" href="../css/style_consultas.css">
+</head>
+<body>
+<a href="sportline.html" class="btn-voltar">⟵ Voltar ao Início</a>
+    <body>
+
+<header class="topo">
+
+    <header class="topo">
+        <h1>Consultas de Veículos</h1>
+        <p>Verifique informações, histórico e detalhes de qualquer veículo.</p>
+
+        <header>
+    <button id="darkToggle">🌙</button>
+</header>
+
+
+    <section class="consulta-container">
+
+        <div class="consulta-card">
+            <h2>Consulta por Placa</h2>
+            <input type="text" placeholder="Digite a placa">
+            <button>Consultar</button>
+        </div>
+
+        <div class="consulta-card">
+            <h2>Consulta por Chassi</h2>
+            <input type="text" placeholder="Digite o chassi">
+            <button>Consultar</button>
+        </div>
+
+        <div class="consulta-card">
+            <h2>Consulta por Renavam</h2>
+            <input type="text" placeholder="Digite o Renavam">
+            <button>Consultar</button>
+        </div>
+
+    </section>
+
+<script>
+document.getElementById("darkToggle").onclick = function () {
+    document.documentElement.classList.toggle("dark");
+};
+</script>
+
+</body>
+</html>

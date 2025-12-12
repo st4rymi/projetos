@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #0a1a33, #1e3a75, #3f5fbf);
+    background-attachment: fixed;
+}
+
+.topo {
+    background: #0033aa;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.consulta-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.consulta-card {
+    background: white;
+    width: 320px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.consulta-card h2 {
+    margin-bottom: 15px;
+}
+
+.consulta-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+}
+
+.consulta-card button {
+    width: 100%;
+    padding: 12px;
+    background: #0033aa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.consulta-card button:hover {
+    background: #001e6b;
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 18px;
+    background: #0033aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn-voltar:hover {
+    background: #001e6b;
+}
+
+/* ===== MODO ESCURO ===== */
+.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Cards no modo escuro */
+.dark-mode .card,
+.dark-mode .consulta-card,
+.dark-mode .box,
+.dark-mode .container div {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #f1f1f1 !important;
+}
+
+/* Inputs */
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+    background-color: #2a2a2a !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
+}
+
+/* Botões */
+.dark-mode button,
+.dark-mode .btn {
+    background-color: #0a84ff !important; /* azul bonito que funciona nos dois temas */
+    color: #fff !important;
+}
+
+/* Títulos */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4 {
+    color: #fff !important;
+}

@@ -1,0 +1,198 @@
+/* Fundo geral em degradê azul */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #0a1a33, #1e3a75, #3f5fbf);
+    background-attachment: fixed;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0a1a33;
+    padding: 15px 30px;
+    color: white;
+}
+
+header .logo {
+    width: 120px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Menu */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #1e3a75;
+}
+
+nav a:hover {
+    background: #345cbb;
+}
+
+/* Slideshow */
+.banner {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    font-family:serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+.hero {
+  width: 100%;
+  height: 300px; /* pode ajustar */
+  overflow: hidden; 
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* faz a imagem ocupar tudo sem distorcer */
+}
+
+/* Filtros */
+.filtros {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: #d9e3ff;
+}
+
+.filtros label {
+    font-weight: bold;
+}
+
+.filtros select {
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* Cards */
+.carros-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+.car-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.car-card h3 {
+    margin: 10px 0;
+}
+
+.car-card p {
+    color: #666;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a1a33;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #1e3a75;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #345cbb;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 250px;
+    }
+    
+
+    .carros-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .car-card img {
+        height: 160px;
+    }
+}
+
+/* ======== TEMA ESCURO ======== */
+.dark body {
+    background: #0a0a0a;
+    color: white;
+}
+
+.dark header {
+    background: #111;
+}
+
+.dark nav a {
+    background: #222;
+    color: white;
+}
+
+.dark nav a:hover {
+    background: #333;
+}
+
+.dark .car-card {
+    background: #1a1a1a;
+    color: white;
+}
+
+.dark .price {
+    color: #9bb8ff;
+}

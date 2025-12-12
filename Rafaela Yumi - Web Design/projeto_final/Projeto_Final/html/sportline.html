@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sportline Veículos</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style_pagina_principal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<body>
+
+<header>
+    <img src="/img/logo.jpeg" class="logo" alt="Logo" />
+    <h1 class="banner-title">Sportline Veículos</h1>
+    <nav>
+        <a href="motos.html">Motos</a>
+        <a href="caminhoes.html">Caminhões</a>
+        <a href="consultas.html">Consultas</a>
+    </nav>
+</header>
+
+<!-- FILTROS -->
+<section class="filtros">
+    <div>
+        <label>Preço:</label>
+        <select>
+            <option>Selecione</option>
+            <option>Até R$ 50.000</option>
+            <option>Até R$ 100.000</option>
+            <option>Acima de R$ 100.000</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Modelo:</label>
+        <select>
+            <option>Selecione</option>
+            <option>Civic</option>
+            <option>308</option>
+            <option>Onix</option>
+            <option>Compass</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Marca:</label>
+        <select>
+            <option>Selecione</option>
+            <option>BMW</option>
+            <option>Honda</option>
+            <option>Peugeot</option>
+            <option>Jeep</option>
+            <option>Chevrolet</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Ano:</label>
+        <select>
+            <option>Selecione</option>
+            <option>2025</option>
+            <option>2024</option>
+            <option>2023</option>
+            <option>2022</option>
+            <option>2021</option>
+        </select>
+    </div>
+</section>
+
+<!-- CARROS -->
+<div class="carros-container">
+
+    <!-- 12 CARDS -->
+    <div class="car-card"><img src="/img/img_bmw.png"><h3>BMW Série 3</h3><p>2.0 Turbo • 2018</p><div class="price">R$ 188.900</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_honda.png"><h3>Honda Civic</h3><p>2.0 Flex • 2020</p><div class="price">R$ 119.900</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_peugeot.png"><h3>Peugeot 208</h3><p>1.6 Flex • 2021</p><div class="price">R$ 89.900</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_jeep.png"><h3>Jeep Compass</h3><p>2.0 TDi • 2019</p><div class="price">R$ 154.900</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_onix.png"><h3>Chevrolet Onix</h3><p>1.0 Turbo • 2022</p><div class="price">R$ 73.900</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_fiatargo.jpeg"><h3>Corolla Altis</h3><p>2.0 Flex • 2021</p><div class="price">R$ 142.900</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_fiat.jpeg"><h3>Honda HR-V</h3><p>1.8 Flex • 2020</p><div class="price">R$ 126.500</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_bmw5.jpeg"><h3>VW T-Cross</h3><p>1.4 TSi • 2021</p><div class="price">R$ 134.900</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_bmw3.jpeg"><h3>Jeep Renegade</h3><p>1.8 Flex • 2019</p><div class="price">R$ 86.900</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_bmw4.jpeg"><h3>VW Gol</h3><p>1.6 Flex • 2020</p><div class="price">R$ 62.900</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_chevr2.jpeg"><h3>Nissan Kicks</h3><p>1.6 Flex • 2022</p><div class="price">R$ 108.500</div><button>Ver Mais</button></div>
+
+    <div class="car-card"><img src="/img/img_bmw2.jpeg"><h3>VW Polo</h3><p>1.0 TSi • 2023</p><div class="price">R$ 96.900</div><button>Ver Mais</button></div>
+
+</div>
+
+<script>
+document.getElementById("darkToggle").onclick = function () {
+    document.documentElement.classList.toggle("dark");
+};
+</script>
+
+</body>
+</html>
